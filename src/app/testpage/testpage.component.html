@@ -1,0 +1,19 @@
+<h1>
+  Tobaino Test page things
+</h1>
+
+<div>
+  Months:
+  <select>
+    <option *ngFor="let i of months">{{i}}</option>
+  </select>
+</div>
+<br>
+
+<div>
+  <span *ngIf="isavailable">Condition is valid.</span>
+</div>
+
+<button (click)="myClickFunction($event)">
+  CLICK ME
+</button>
