@@ -2,16 +2,31 @@
   Tobaino Test page things
 </h1>
 
-<div>
-  Months:
-  <select>
+<!--code below is fro drop down where the variable have been declared in component.ts-->
+<!--<div>-->
+<!--Months:-->
+<!--<select>-->
+<!--<option *ngFor="let i of months">{{i}}</option>-->
+<!--</select>-->
+<!--</div>-->
+<!--<br>-->
+
+<!--<div>-->
+<!--<span *ngIf="isavailable">Condition is valid.</span>-->
+<!--</div>-->
+
+
+<div> Months :
+  <select (change)="changemonths($event)" name="month">
     <option *ngFor="let i of months">{{i}}</option>
   </select>
 </div>
-<br>
+<br/>
 
 <div>
-  <span *ngIf="isavailable">Condition is valid.</span>
+  <span *ngIf="isavailable; else condition2">Condition is valid.</span>
+  <ng-template #condition1>Condition is valid from template</ng-template>
+  <ng-template #condition2>Condition is invalid from template</ng-template>
 </div>
 
 <button (click)="myClickFunction($event)">
